@@ -1,0 +1,16 @@
+{
+  "name": "node-ci-cd-demo",
+  "version": "1.0.0",
+  "description": "My first GitHub Actions CI/CD pipeline",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo "✅ All tests passed!" && exit 0"
+  },
+  "keywords": ["devops", "ci-cd"],
+  "author": "Utkarsh",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

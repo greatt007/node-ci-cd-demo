@@ -1,0 +1,31 @@
+name: 🚀 CI Pipeline - Node.js Demo
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🧪 Run tests
+        run: npm test
+
+      - name: 🎉 Show success message
+        run: |
+          echo "✅ PIPELINE SUCCESS!"
+          echo "📊 Node version: $(node --version)"
+          echo "📦 NPM version: $(npm --version)"
