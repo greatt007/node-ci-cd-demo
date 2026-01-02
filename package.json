@@ -1,14 +1,14 @@
 {
   "name": "node-ci-cd-demo",
   "version": "1.0.0",
-  "description": "My first GitHub Actions CI/CD pipeline",
+  "description": "GitHub Actions CI/CD Demo",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo "✅ All tests passed!" && exit 0"
+    "test": "echo 'Tests passed!' && exit 0"
   },
-  "keywords": ["devops", "ci-cd"],
-  "author": "Utkarsh",
+  "keywords": ["devops", "cicd"],
+  "author": "Your Name",
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2"
