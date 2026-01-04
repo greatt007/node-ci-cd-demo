@@ -25,5 +25,10 @@
     "verbose": true,
     "detectOpenHandles": true,
     "forceExit": 0
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "forceExit": true
   }
 }
