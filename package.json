@@ -1,16 +1,20 @@
 {
   "name": "node-ci-cd-demo",
-  "version": "1.0.0",
-  "description": "GitHub Actions CI/CD Demo",
+  "version": "1.0.1",
+  "description": "Day 2: Jest + Docker CI/CD",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo 'Tests passed!' && exit 0"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
-  "keywords": ["devops", "cicd"],
-  "author": "Your Name",
-  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

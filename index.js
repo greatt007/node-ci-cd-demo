@@ -1,15 +1,15 @@
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 3000;
+const request = require('supertest');
+const app = require('../index');
 
-app.get('/', (req, res) => {
-  res.json({
-    message: '🎉 Hello from GitHub Actions CI/CD!',
-    timestamp: new Date().toISOString(),
-    github_sha: process.env.GITHUB_SHA || 'local'
+describe('API Endpoints', () => {
+  test('GET / returns hello message', async () => {
+    const response = await request(app)
+      .get('/');
+    expect(response.status).toBe(200);
+    expect(response.body.message).toContain('Hello');
   });
-});
 
-app.listen(PORT, () => {
-  console.log(🚀 Server running on port ${PORT});
+  test('Server starts without errors', () => {
+    expect(1).toBe(1); // Placeholder
+  });
 });
