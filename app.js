@@ -1,6 +1,8 @@
-const app = require('./app');
+const express = require('express');
+const app = express();
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello from Node CI/CD demo!' });
 });
+
+module.exports = app;
