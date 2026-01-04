@@ -19,5 +19,11 @@
   },
   "jest": {
     "testEnvironment": "node"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "detectOpenHandles": true,
+    "forceExit": 0
   }
 }
