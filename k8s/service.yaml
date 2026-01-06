@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-ci-cd-demo
+spec:
+  selector:
+    app: node-demo
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 30000  # Fixed external port
+  type: NodePort
